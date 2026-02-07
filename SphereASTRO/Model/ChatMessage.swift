@@ -7,11 +7,23 @@
 
 import Foundation
 
-struct ChatMessage: Identifiable {
+/// GUIレイヤー専用のメッセージモデル。
+/// 思考処理(FAM)と切り離し、記録データとして扱う。
+struct ChatMessage: Identifiable, Codable, Hashable {
     let id: UUID
-    let roomID: UUID
     let senderID: ParticipantID
-    let body: MessageBody
+    let body: String
     let timestamp: Date
-}
 
+    init(
+        id: UUID = UUID(),
+        senderID: ParticipantID,
+        body: String,
+        timestamp: Date = Date()
+    ) {
+        self.id = id
+        self.senderID = senderID
+        self.body = body
+        self.timestamp = timestamp
+    }
+}

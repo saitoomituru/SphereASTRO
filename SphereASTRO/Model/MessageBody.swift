@@ -7,9 +7,8 @@
 
 import Foundation
 
-enum MessageBody {
+/// 将来の拡張ポイントとして残す軽量メッセージ本文型。
+/// 現フェーズではテキストのみを使用する。
+enum MessageBody: Codable, Hashable {
     case text(String)
-    case image(ImageRef)
-    case audio(AudioRef)
-    case systemNotice(String)
 }

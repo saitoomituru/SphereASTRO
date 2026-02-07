@@ -7,14 +7,10 @@
 
 import Foundation
 
-struct Participant: Identifiable {
+/// チャットUIで使う送信者ID。現フェーズでは文字列ベースの軽量表現のみを採用する。
+typealias ParticipantID = String
+
+struct Participant: Identifiable, Codable, Hashable {
     let id: ParticipantID
     let displayName: String
-    let kind: ParticipantKind   // 表示用だけ
-}
-
-enum ParticipantKind {
-    case human
-    case agent
-    case system
 }
