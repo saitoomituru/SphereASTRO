@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-/// アプリ全体のルートビュー。部屋一覧とチャット本文を分離表示する。
+/// アプリ全体のルートビュー。サイドバーとメインペインを分離表示する。
 struct ContentView: View {
     @StateObject private var viewModel: ChatViewModel
 
@@ -19,12 +19,27 @@ struct ContentView: View {
         NavigationSplitView {
             ChatRoomListView(viewModel: viewModel)
         } detail: {
-            if viewModel.selectedRoom != nil {
+            switch effectivePane {
+            case .home:
+                HomeView(viewModel: viewModel)
+            case .chat:
                 ChatView(viewModel: viewModel)
-            } else {
-                ContentUnavailableView("チャットを選択", systemImage: "bubble.left.and.bubble.right")
+            case .settings:
+                SettingsView(viewModel: viewModel)
             }
         }
+    }
+
+    private var effectivePane: MainPane {
+        if viewModel.rooms.isEmpty {
+            return .home
+        }
+
+        if viewModel.mainPane == .chat, viewModel.selectedRoom == nil {
+            return .home
+        }
+
+        return viewModel.mainPane
     }
 }
 
