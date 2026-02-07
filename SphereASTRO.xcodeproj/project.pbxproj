@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		F8E843922F37249E00E6703D /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = F8E843912F37249D00E6703D /* readme.md */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		F8E8433F2F3704F500E6703D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +31,7 @@
 		F8E8432D2F3704F200E6703D /* SphereASTRO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SphereASTRO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8E8433E2F3704F500E6703D /* SphereASTROTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SphereASTROTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8E843482F3704F600E6703D /* SphereASTROUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SphereASTROUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8E843912F37249D00E6703D /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -79,6 +84,7 @@
 				F8E843412F3704F500E6703D /* SphereASTROTests */,
 				F8E8434B2F3704F600E6703D /* SphereASTROUITests */,
 				F8E8432E2F3704F200E6703D /* Products */,
+				F8E843912F37249D00E6703D /* readme.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -212,6 +218,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8E843922F37249E00E6703D /* readme.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

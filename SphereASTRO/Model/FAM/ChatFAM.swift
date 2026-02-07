@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+enum ChatFAM {
+    case thinking(BaseFAM<ChatPsi, ChatPhi, ChatQ, String>)
+}

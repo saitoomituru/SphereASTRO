@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct ChatRoom: Identifiable {
+    let id: UUID
+    let title: String
+    let participants: [ParticipantID]
+}

@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+enum MessageBody {
+    case text(String)
+    case image(ImageRef)
+    case audio(AudioRef)
+    case systemNotice(String)
+}

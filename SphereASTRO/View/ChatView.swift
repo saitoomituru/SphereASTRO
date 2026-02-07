@@ -10,36 +10,24 @@ import SwiftUI
 
 struct ChatView: View {
     @StateObject private var vm = ChatViewModel()
+    @State private var input = ""
 
     var body: some View {
         VStack {
-            ScrollViewReader { proxy in
-                ScrollView {
-                    LazyVStack(alignment: .leading, spacing: 12) {
-                        ForEach(vm.messages) { msg in
-                            MessageRow(message: msg)
-                                .id(msg.id)
-                        }
-                    }
-                    .padding()
-                }
-                .onChange(of: vm.messages.count) { _ in
-                    if let last = vm.messages.last {
-                        proxy.scrollTo(last.id, anchor: .bottom)
+            ScrollView {
+                LazyVStack {
+                    ForEach(vm.messages) {
+                        MessageRow(message: $0)
                     }
                 }
             }
 
-            Divider()
-
             HStack {
-                TextField("Message", text: $vm.inputText, axis: .vertical)
-                    .textFieldStyle(.roundedBorder)
-
+                TextField("Message", text: $input)
                 Button("Send") {
-                    vm.send()
+                    vm.send(text: input)
+                    input = ""
                 }
-                .disabled(vm.inputText.isEmpty)
             }
             .padding()
         }

@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+enum AgentInitFAM {
+    case boot(BaseFAM<AgentPsi, AgentPhi, AgentQ, Never>)
+}

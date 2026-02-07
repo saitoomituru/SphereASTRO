@@ -12,22 +12,19 @@ struct MessageRow: View {
     let message: ChatMessage
 
     var body: some View {
-        HStack(alignment: .top) {
+        HStack {
             if message.role == .assistant {
-                Spacer(minLength: 0)
+                Spacer(minLength: 40)
             }
 
             content
                 .padding(10)
-                .background(
-                    message.role == .user
-                    ? Color.blue.opacity(0.15)
-                    : Color.gray.opacity(0.15)
-                )
-                .cornerRadius(10)
+                .background(message.role == .user ? Color.blue.opacity(0.2)
+                                                   : Color.gray.opacity(0.2))
+                .cornerRadius(8)
 
             if message.role == .user {
-                Spacer(minLength: 0)
+                Spacer(minLength: 40)
             }
         }
     }
@@ -37,11 +34,16 @@ struct MessageRow: View {
         switch message.content {
         case .text(let text):
             Text(text)
-                .textSelection(.enabled)
 
         case .code(let code, _):
-            Text(code)
-                .font(.system(.body, design: .monospaced))
+            ScrollView(.horizontal) {
+                Text(code)
+                    .font(.system(.body, design: .monospaced))
+            }
+
+        case .latex(let latex):
+            Text(latex) // 後でMathJax/WebViewに置換
         }
     }
 }
+

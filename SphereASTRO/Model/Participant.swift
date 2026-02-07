@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+struct Participant: Identifiable {
+    let id: ParticipantID
+    let displayName: String
+    let kind: ParticipantKind   // 表示用だけ
+}
+
+enum ParticipantKind {
+    case human
+    case agent
+    case system
+}

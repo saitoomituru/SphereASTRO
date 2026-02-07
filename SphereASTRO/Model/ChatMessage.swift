@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+struct ChatMessage: Identifiable {
+    let id: UUID
+    let roomID: UUID
+    let senderID: ParticipantID
+    let body: MessageBody
+    let timestamp: Date
+}
+

@@ -6,3 +6,14 @@
 //
 
 import Foundation
+
+struct BaseFAM<Psi, Phi, Q, Lambda>: FAMCore {
+    let kind: FAMKind
+
+    let psi: Psi
+    let phi: Phi
+    let lambda: Lambda?
+    
+    let q: Q
+
+}

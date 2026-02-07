@@ -7,19 +7,9 @@
 
 import Foundation
 
-struct ChatMessage: Identifiable {
-    let id = UUID()
-    let role: Role
-    let content: MessageContent
+enum MessageBody {
+    case text(String)
+    case image(ImageRef)
+    case audio(AudioRef)
+    case systemNotice(String)
 }
-
-class ChatViewModel: ObservableObject {
-    @Published var messages: [ChatMessage] = []
-
-    func send(_ text: String) {
-        // 1. user message を追加
-        // 2. assistant message を空で追加
-        // 3. ストリームで λ_chat を追記
-    }
-}
-

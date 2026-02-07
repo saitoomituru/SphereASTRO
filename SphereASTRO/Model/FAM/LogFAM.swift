@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct LogFAM {
+    let core: BaseFAM<AnyPsiHash, AnyPhi, AnyQ, AnyLambda>
+    let timestamp: Date
+}
+
