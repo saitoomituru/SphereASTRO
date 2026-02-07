@@ -30,6 +30,8 @@ xcuserdata/
 # Swift Package Manager
 .build/
 Package.resolved
+.swiftpm/
+Packages/
 
 ################################
 # C / C++ / CMake
@@ -39,7 +41,6 @@ cmake-build-*/
 CMakeCache.txt
 CMakeFiles/
 cmake_install.cmake
-Makefile
 
 ################################
 # Python
@@ -88,3 +89,7 @@ out/
 tmp/
 temp/
 .cache/
+
+# Test / coverage
+*.xccovreport
+*.xccovarchive
