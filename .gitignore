@@ -1,0 +1,90 @@
+################################
+# OS / Editor 共通
+################################
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+.idea/
+*.swp
+*.swo
+*~
+*.log
+
+################################
+# Xcode
+################################
+DerivedData/
+build/
+xcuserdata/
+*.xcuserstate
+*.xcworkspace/xcuserdata/
+
+# Swift Package Manager
+.build/
+Package.resolved
+
+################################
+# C / C++ / CMake
+################################
+build/
+cmake-build-*/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+################################
+# Python
+################################
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+.env
+.env.*
+
+################################
+# Node / JS
+################################
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+################################
+# Docker
+################################
+*.tar
+*.log
+docker-compose.override.yml
+
+################################
+# AI / ML 系（重い生成物）
+################################
+models/
+checkpoints/
+weights/
+*.bin
+*.pt
+*.pth
+*.onnx
+*.gguf
+*.safetensors
+
+################################
+# 自動生成・一時ファイル
+################################
+dist/
+out/
+tmp/
+temp/
+.cache/
