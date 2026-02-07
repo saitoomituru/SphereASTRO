@@ -7,22 +7,45 @@
 
 import SwiftUI
 
-/// チャットルーム一覧を表示するサイドバー。
+/// メインペインの導線とチャットルーム一覧を表示するサイドバー。
 struct ChatRoomListView: View {
     @ObservedObject var viewModel: ChatViewModel
 
     var body: some View {
-        List(viewModel.rooms, selection: $viewModel.selectedRoomID) { room in
-            VStack(alignment: .leading, spacing: 4) {
-                Text(room.title)
-                    .font(.headline)
-                Text("\(room.messages.count)件")
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
+        List {
+            Section("トップ") {
+                Button {
+                    viewModel.openHome()
+                } label: {
+                    Label("ホーム", systemImage: "house")
+                }
+
+                Button {
+                    viewModel.openSettings()
+                } label: {
+                    Label("設定", systemImage: "gearshape")
+                }
             }
-            .padding(.vertical, 2)
+
+            Section("チャット") {
+                ForEach(viewModel.rooms) { room in
+                    Button {
+                        viewModel.openChat(roomID: room.id)
+                    } label: {
+                        VStack(alignment: .leading, spacing: 4) {
+                            Text(room.title)
+                                .font(.headline)
+                            Text("\(room.messages.count)件")
+                                .font(.caption)
+                                .foregroundStyle(.secondary)
+                        }
+                        .padding(.vertical, 2)
+                    }
+                    .buttonStyle(.plain)
+                }
+            }
         }
-        .navigationTitle("チャット")
+        .navigationTitle("SphereASTRO")
     }
 }
 
