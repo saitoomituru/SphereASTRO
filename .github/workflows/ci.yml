@@ -1,0 +1,22 @@
+name: GUI CI
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+
+jobs:
+  build-and-test:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Show Xcode version
+        run: xcodebuild -version
+
+      - name: Build (single entry point)
+        run: make build
+
+      - name: Test (single entry point)
+        run: make test
