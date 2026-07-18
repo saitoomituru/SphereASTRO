@@ -58,3 +58,17 @@ Context Dimension、D Fold、OAE、Access Mapを扱う場合は、Manifestの[Sp
 - `Q.layer`やFAMの`λ=出力層`はlegacy Presentation／互換fieldであり、L／D正本へしない
 - SphereASTROはGUI／型placeholderのconsumerである。AstroSDK、OAE共通Schema、D Fold実装を本リポジトリへ持ち込まない
 - Human SovereigntyはSphereASTRO固有のgovernance profileであり、OAE上の全Effectをhuman-causedへ書き換える規則ではない
+
+## MAGIポジショントーク監査（必読）
+
+計画提案、状態評価、README／技術文書の主張変更、component間の優先順位決定、
+複数repositoryへ波及する変更の前に、ZeroRoomLab-manifestの
+[AGENTS.md §0.4](https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/main/AGENTS.md)、
+[Atlantis-MAGISDK 0.1.0](https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/main/docs/theory/atlantis-magi-sdk.ja.md)、
+[Context定規・因果・OAE横断監査規約](https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/main/docs/operations/context-ruler-and-causality-audit.ja.md)
+を読むこと。
+
+Declared Position、Position-talk Risk、媒体とclaim scope、外部定規の出所を分離し、
+現在のrepository、cwd、vendor、binary実装、一般的な線形roadmapを暗黙のmainへ置かない。
+重大なstatus・責務・公開主張・横断変更では、監査結果とUser確認が必要な項目を記録し、
+計画をUserへ返してから実行する。
