@@ -4,6 +4,8 @@ SphereASTRO は、人間主権（Human Sovereignty）を維持するために、
 対話体験の入口となる GUI と責任境界を設計するプロジェクトである。
 本プロジェクトは、創造・人格・意識を扱うことを前提に、判断根拠と運用責任を人間側へ明示的に接続することを目的とする。
 
+Human SovereigntyはSphereASTROが選択したapplication governance profileであり、Sphere Architect Core全体の普遍的な存在論・因果定規ではない。OAE等の観測情報を将来GUIへ表示する場合も、Observer、Initiator、Executor、Causal AgencyをUIが自動統合せず、上位Registryとfact scopeを表示する。
+
 ## Vision / Philosophy
 - 人間主権を前提とし、判断と責任の最終主体は常に人間とする。
 - 責任分界を明示し、判断過程の追跡可能性を確保する。
@@ -15,6 +17,8 @@ SphereASTRO は、人間主権（Human Sovereignty）を維持するために、
 - これは一般的なAIチャットアプリではない。
 - これはLLMそのものではない。
 - これは、人間の判断主体を保つためのGUIと境界層（Boundary Layer）である。
+
+ここでいうBoundary LayerはGUI、adapter、engine、persistence間の技術依存`L`である。御霊、依代、World、Actor、Spiritual／Astral等の意味体系はContext Dimension `D`側の別軸であり、技術Layerの上下へ自動配置しない。共通定義は[Sphere Context Dimension OSアーキテクチャ](https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/main/docs/theory/sphere-context-dimension-os.ja.md)を参照する。
 
 ## Core Concepts (High Level)
 - **御霊（Mitama）**: 実在断定を避けつつ、意識・自我・人格の等価エミュレーションを設計目標に据える人格モデル。
@@ -55,6 +59,7 @@ docs/ 以下に分離されています。
 - FAM 概念と層設計: [`docs/concepts/fam.proton.md`](docs/concepts/fam.proton.md), [`docs/architecture/fam-layers.md`](docs/architecture/fam-layers.md)
 - EdoHAGE 監査チェーン: [`docs/concepts/audit-chain-edohage.proton.md`](docs/concepts/audit-chain-edohage.proton.md)
 - GUI責務分離: [`docs/architecture/gui-responsibility.md`](docs/architecture/gui-responsibility.md)
+- Sphere共通L／D／OAE境界: [Sphere Context Dimension OSアーキテクチャ](https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/main/docs/theory/sphere-context-dimension-os.ja.md)
 
 ## License
 Apache 2.0

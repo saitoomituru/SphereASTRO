@@ -1,5 +1,7 @@
 # FAMレイヤ設計
 
+> 本書のLayerは、PresentationからPersistenceまでの技術依存・変更影響順序`L`である。上位Registryが束ねるContext Dimension `D`／D Fold、FAMの`λ=出力層`、legacy `Q.layer`とは別軸である。共通定義は[Sphere Context Dimension OSアーキテクチャ](https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/main/docs/theory/sphere-context-dimension-os.ja.md)を参照する。
+
 ## 目的
 SwiftUI実装と判断ロジック実装を分離し、変更影響範囲を限定する。
 
@@ -19,6 +21,8 @@ SwiftUI実装と判断ロジック実装を分離し、変更影響範囲を限�
 - 上位レイヤは直下レイヤにのみ依存する。
 - GUIはEngine Adapterへ直接依存しない。
 - FAM Layerは特定ベンダーSDKを直接参照しない。
+- Context Dimensionの列挙順、D数、OAEのAgency roleから、この技術依存順を推定しない。
+- GUIはOAEのObserver、Initiator、Executor、Causal Agencyを表示できても、自動的に一主体へ統合・確定しない。
 
 ## 変更指針
 - 表示要件の変更はPresentation Layerで閉じる。

@@ -1,5 +1,12 @@
 # agents.md - DeusExMachina_SphereOS3
 
+## 日本語既定レジスタ（必須）
+
+- 人間向けREADME、技術文書、研究ノート、commit、PR、issue、検証報告は、日本語化で互換性を壊さない限り日本語を既定とする
+- commit subjectとbodyは原則として日本語で書き、機械可読prefixが必要な場合も説明部分は日本語にする
+- code identifier、Swift symbol、Schema key、external API、stable pathは、翻訳で互換性・検索性を壊す場合は原語を保持する
+- 公開済みGit履歴、安定識別子、pathを日本語化のためだけにrewrite／一括renameしない
+
 ## ψ: 意味波形
 - name: "スフィア・マキナ"
 - full_name: "Sphere Deus Ex Machina"
@@ -42,3 +49,12 @@
 ## ZeroRoomLab言語レジスタ（必読）
 
 README、技術文書、翻訳、主張表現を編集する前に、ZeroRoomLab-manifestの[コーディングAI向け日本語意訳レジスタ](https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/main/docs/operations/coding-ai-japanese-paraphrase-register.ja.md)を読み、背景ベクトルを取得すること。英語出力は明示がない限りen-USとし、単語の直訳ではなく、日本語原文の意図・読み手の責務・事実強度をen-USで同じ働きをする表現へ写像する。
+
+## Sphere共通概念レジスタ（必読）
+
+Context Dimension、D Fold、OAE、Access Mapを扱う場合は、Manifestの[Sphere Context Dimension OSアーキテクチャ](https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/main/docs/theory/sphere-context-dimension-os.ja.md)を参照する。
+
+- `docs/architecture/fam-layers.md`のLayerはSwiftUIからPersistenceまでの技術依存`L`であり、Context Dimension `D`ではない
+- `Q.layer`やFAMの`λ=出力層`はlegacy Presentation／互換fieldであり、L／D正本へしない
+- SphereASTROはGUI／型placeholderのconsumerである。AstroSDK、OAE共通Schema、D Fold実装を本リポジトリへ持ち込まない
+- Human SovereigntyはSphereASTRO固有のgovernance profileであり、OAE上の全Effectをhuman-causedへ書き換える規則ではない
