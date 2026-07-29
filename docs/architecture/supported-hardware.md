@@ -59,3 +59,25 @@ Hackintoshを常設の安定推論サーバーとは位置づけない。安定�
 - 未検証事項
 
 generic build成功、Simulator成功、実機推論成功は別々の事実として記録する。
+
+## 2026-07-29 検証receipt
+
+### 成功
+
+- `generic/platform=iOS Simulator`のDebug buildはarm64 / x86_64とも成功
+- 対象platformを`iphoneos iphonesimulator`、device familyをiPhone / iPadへ限定した後もgeneric build成功
+- shell scriptの構文検査と`git diff --check`成功
+
+### 失敗・未完了
+
+- 従来の`make ci`は、ローカルに存在しない`iPhone 15` Simulatorを固定指定していたためdestination解決で失敗
+- 代替のiPhone 16 Simulatorではunit testとUI launch testの一部が成功したが、UI test workerの終了処理が完了せず手動中断
+- iPhone 16での部分成功は正式なiPhone 15 Pro Max実機receiptへ昇格しない
+- iPhone 15 Pro Max実機とiPad Pro 13-inch (M4)実機のテストは未実施
+
+### 対応
+
+- 既定Simulatorを、既存環境にあるiPad Pro 13-inch (M4)へ変更
+- 実機試験は明示されたUDIDがある場合だけ実行する
+- 追加Simulator runtimeは導入しない
+- UI test終了ハングは再現条件を分離できるまで`UNKNOWN`として保持する
