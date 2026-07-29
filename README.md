@@ -34,9 +34,13 @@ Human SovereigntyはSphereASTROが選択したapplication governance profileで�
 
 ## Current Status
 - 実装言語・UI基盤: Swift / SwiftUI
-- 対応対象: macOS / iOS
+- 正式な実機: iPhone 15 Pro Max / iPad Pro 13-inch (M4)
+- 安定推論の主依代: iPad Pro 13-inch (M4)
+- 開発炉: Hackintosh（編集、generic iOS build、Ollama疎通、変換、互換観測）
 - 対話形態: ソロチャット（1人Mattermost相当）
 - AI接続: 未接続（後段で統合予定）
+
+Simulatorは必要最小限の補助試験に限定する。generic build、Simulator、実機推論の成功を相互に代用せず、追加端末やGPU火力が必要な検証は火力要請として分離する。詳細は[対応実機・検証炉](docs/architecture/supported-hardware.md)を参照する。
 
 ## Responsibility & Law
 - AIは無罪か有罪かという二元論に逃げない。AIという概念自体を罰さない（概念罰を行わない）。
@@ -59,6 +63,7 @@ docs/ 以下に分離されています。
 - FAM 概念と層設計: [`docs/concepts/fam.proton.md`](docs/concepts/fam.proton.md), [`docs/architecture/fam-layers.md`](docs/architecture/fam-layers.md)
 - EdoHAGE 監査チェーン: [`docs/concepts/audit-chain-edohage.proton.md`](docs/concepts/audit-chain-edohage.proton.md)
 - GUI責務分離: [`docs/architecture/gui-responsibility.md`](docs/architecture/gui-responsibility.md)
+- 対応実機・検証炉: [`docs/architecture/supported-hardware.md`](docs/architecture/supported-hardware.md)
 - Sphere共通L／D／OAE境界: [Sphere Context Dimension OSアーキテクチャ](https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/main/docs/theory/sphere-context-dimension-os.ja.md)
 
 ## License

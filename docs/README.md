@@ -15,6 +15,7 @@ README から分離した仕様を、概念・設計・アルゴリズムの3層
 - [FAM レイヤ設計](./architecture/fam-layers.md)
 - [GUI 責務定義](./architecture/gui-responsibility.md)
 - [Engine Boundary（依代境界）](./architecture/engine-boundary.md)
+- [対応実機・検証炉](./architecture/supported-hardware.md)
 - [Sphere共通Context Dimension OS](https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/main/docs/theory/sphere-context-dimension-os.ja.md) — 技術Layer `L`とContext Dimension `D`、OAEの横断正本候補
 
 ## 3. Algorithms（実装可能仕様）
