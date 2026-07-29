@@ -78,4 +78,12 @@ docs/ 以下に分離されています。
 - Sphere共通L／D／OAE境界: [Sphere Context Dimension OSアーキテクチャ](https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/main/docs/theory/sphere-context-dimension-os.ja.md)
 
 ## License
-Apache 2.0
+
+**コードはApache-2.0、文章・用語・図解・世界観などのフレーバー層はCC BY 4.0です。
+自由に利用できますが、フレーバーを継承して語る場合は出典を明記してください。**
+
+**Code is Apache-2.0. Narrative, terminology, diagrams, and conceptual flavor are
+CC BY 4.0. Use freely, but preserve attribution when carrying the flavor forward.**
+
+ルートの[LICENSE](LICENSE)はコードへ適用するApache License 2.0全文です。
+第三者素材と個別表示のある成果物は、そのライセンスを優先します。
