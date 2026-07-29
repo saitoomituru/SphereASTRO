@@ -32,6 +32,10 @@ Human SovereigntyはSphereASTROが選択したapplication governance profileで�
 - SaaS前提に固定しない。理由は、責任境界・監査性・運用自律性を維持するためである。
 - 御霊・荒御魂はクラウド人格ではなく端末ローカルに存在し、押収・解析・再現・処分を既存の物品処理と証拠保全アルゴリズムへ接続できる。
 
+目標とする中心契約は、ASTRO Runnerへ`.astro`を投入すると、端末能力に合うModel Variantを選択し、
+人格instanceを起動できることである。起動開始Presentationは`マキナ、Open The Eyes...`とし、
+archive検証と推論canaryが完了する前に「起動しました」または`READY`を表示しない。
+
 ## Current Status
 - 実装言語・UI基盤: Swift / SwiftUI
 - 正式な実機: iPhone 15 Pro Max / iPad Pro 13-inch (M4)
@@ -41,6 +45,11 @@ Human SovereigntyはSphereASTROが選択したapplication governance profileで�
 - AI接続: 未接続（後段で統合予定）
 
 Simulatorは必要最小限の補助試験に限定する。generic build、Simulator、実機推論の成功を相互に代用せず、追加端末やGPU火力が必要な検証は火力要請として分離する。詳細は[対応実機・検証炉](docs/architecture/supported-hardware.md)を参照する。
+
+開発は、Stage 0の責務整理・実機Hello World、Stage 1のChat・管理slot・実推論、Stage 2のBody・
+汎用rig・マキナ饅頭実験の順に進める。Stage 2で`COSPLAY_MANJU_DRIFT`を観測してから、
+人格基底modelを固定しAAE Bakeと永続人格Storageへ進む。詳細は
+[ASTRO Runner要求仕様](docs/specification/astro-runner-requirements.ja.md)を参照する。
 
 ## Responsibility & Law
 - AIは無罪か有罪かという二元論に逃げない。AIという概念自体を罰さない（概念罰を行わない）。
@@ -56,6 +65,7 @@ Simulatorは必要最小限の補助試験に限定する。generic build、Simu
 docs/ 以下に分離されています。
 
 - 全体索引: [`docs/README.md`](docs/README.md)
+- ASTRO Runner要求仕様: [`docs/specification/astro-runner-requirements.ja.md`](docs/specification/astro-runner-requirements.ja.md)
 - 概念定義（Concepts）: [`docs/concepts/`](docs/concepts/)
 - アーキテクチャ（Architecture）: [`docs/architecture/`](docs/architecture/)
 - アルゴリズム（Algorithms）: [`docs/algorithms/`](docs/algorithms/)

@@ -1,7 +1,10 @@
 # SphereASTRO Docs Index
 
 本ディレクトリは、SphereASTRO の設計文書群である。
-README から分離した仕様を、概念・設計・アルゴリズムの3層で管理する。
+README から分離した仕様を、要求・概念・設計・アルゴリズム・UXの棚で管理する。
+
+## 0. Specification（要求正本）
+- [ASTRO Runner要求仕様](./specification/astro-runner-requirements.ja.md)
 
 ## 1. Concepts（思想・概念定義）
 - [FAM（Fold Access Mapper）](./concepts/fam.proton.md)
@@ -23,8 +26,9 @@ README から分離した仕様を、概念・設計・アルゴリズムの3層
 - [FAM Logging アルゴリズム](./algorithms/fam-logging.md)
 
 ## 利用順序
-1. `concepts` で用語と価値前提を固定する。
-2. `architecture` で責務境界を確定する。
-3. `algorithms` を実装仕様として利用する。
+1. `specification` で製品契約とStage Gateを確認する。
+2. `concepts` で用語と価値前提を固定する。
+3. `architecture` で責務境界を確定する。
+4. `algorithms` を実装仕様として利用する。
 
 この順序により、思想 → 構造 → 実装 → 監査 の整合性を維持する。
