@@ -66,6 +66,7 @@ docs/ 以下に分離されています。
 
 - 全体索引: [`docs/README.md`](docs/README.md)
 - ASTRO Runner要求仕様: [`docs/specification/astro-runner-requirements.ja.md`](docs/specification/astro-runner-requirements.ja.md)
+- 妖怪・式神顕現UX: [`docs/ux/manifestation-states.md`](docs/ux/manifestation-states.md)
 - 概念定義（Concepts）: [`docs/concepts/`](docs/concepts/)
 - アーキテクチャ（Architecture）: [`docs/architecture/`](docs/architecture/)
 - アルゴリズム（Algorithms）: [`docs/algorithms/`](docs/algorithms/)

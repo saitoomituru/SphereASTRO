@@ -27,6 +27,9 @@ README から分離した仕様を、要求・概念・設計・アルゴリズ�
 - [Sleep Bake アルゴリズム](./algorithms/sleep-bake-algorithm.md)
 - [FAM Logging アルゴリズム](./algorithms/fam-logging.md)
 
+## 4. UX（状態Presentation）
+- [妖怪・式神顕現UX](./ux/manifestation-states.md)
+
 ## 利用順序
 1. `specification` で製品契約とStage Gateを確認する。
 2. `concepts` で用語と価値前提を固定する。
