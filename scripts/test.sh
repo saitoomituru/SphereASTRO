@@ -4,7 +4,8 @@ set -euo pipefail
 PROJECT="${PROJECT:-SphereASTRO.xcodeproj}"
 SCHEME="${SCHEME:-SphereASTRO}"
 CONFIGURATION="${CONFIGURATION:-Debug}"
-DESTINATION="${DESTINATION:-platform=iOS Simulator,name=iPhone 15}"
+DESTINATION="${DESTINATION:-platform=iOS Simulator,name=iPad Pro 13-inch (M4)}"
+HARDWARE_CLASS="${HARDWARE_CLASS:-ipad-pro-13-m4-simulator}"
 DERIVED_DATA_PATH="${DERIVED_DATA_PATH:-.build/DerivedData}"
 XCCONFIG="${XCCONFIG:-config/ci-signing-off.xcconfig}"
 
@@ -14,6 +15,9 @@ if ! command -v xcodebuild >/dev/null 2>&1; then
 fi
 
 mkdir -p "${DERIVED_DATA_PATH}"
+
+echo "[test] hardware_class=${HARDWARE_CLASS}"
+echo "[test] destination=${DESTINATION}"
 
 xcodebuild \
   -project "${PROJECT}" \
