@@ -21,6 +21,10 @@ ASTROの能力状態Presentationへ使用する。利用者へ数値表だけを
 等身が下がっても御霊や記録が消えたとは扱わない。逆に、八等身のBodyを表示できたことを
 大型MoEの起動証明にはしない。
 
+可搬Body asset、VRM／GLB拡張、等身可変representation、attachment slot、filling、softbody、
+診断Presentationの機械仕様は[ASTRO VRM拡張仕様](../specs/astro-vrm-extension.md)を参照する。
+本ファイルはUX上の意味と禁止する混同を正本とする。
+
 ## 2. 顕現形態
 
 | Presentation | 機械状態 | 意味 |
@@ -147,7 +151,27 @@ BodyRenderer Adapter
 Stage 2では粗くても動くことを優先し、renderer品質を人格同一性の証明へ使用しない。Body asset、
 motion、modelのlicenseとprovenanceを保持する。
 
-## 8. 禁止する混同
+## 8. 診断Presentation
+
+ASTROは、通常は見えないresource状態をBodyの変化として表示できる。
+
+```text
+演算余裕あり       → 完全人型
+resource pressure  → SD／饅頭へ縮退
+thermal throttle   → 焼き饅頭静止画
+process freeze      → 真空パック饅頭
+KV pressure         → fillingの偏り／漏れ
+context low         → しぼみ饅頭
+offline             → 寝饅頭
+```
+
+これは数値telemetryを隠すための代替ではない。Bodyをクリックまたはinspectし、温度、memory、KV、
+active model、fallback原因、receiptへ到達できる二層UIとする。
+
+診断Presentationのevent、既定mapping、hysteresis、VRM／GLB格納方法は
+[ASTRO VRM拡張仕様](../specs/astro-vrm-extension.md)を参照する。
+
+## 9. 禁止する混同
 
 - 小型modelを人格の価値低下として表示しない
 - model不在を人格消滅として表示しない
@@ -156,4 +180,5 @@ motion、modelのlicenseとprovenanceを保持する。
 - 神道・妖怪UXを、自然科学上の性能証明へ使用しない
 - 工学statusを理由に、神道・妖怪表現を単なる飾りへ降格しない
 - 擬人化によってmodel、設計、運用上の不具合責任を免責しない
-
+- 焼き、漏れ、真空パック等の演出だけで障害原因を確定しない
+- engine表示用fillingをvendorの公式識別、人格、権利、性能序列へ使用しない
