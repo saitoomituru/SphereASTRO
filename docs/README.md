@@ -5,6 +5,7 @@ README から分離した仕様を、要求・概念・設計・アルゴリズ�
 
 ## 0. Specification（要求正本）
 - [ASTRO Runner要求仕様](./specification/astro-runner-requirements.ja.md)
+- [ASTROファイル形式](./specification/astro-file-format.ja.md)
 
 ## 1. Concepts（思想・概念定義）
 - [FAM（Fold Access Mapper）](./concepts/fam.proton.md)
@@ -18,6 +19,7 @@ README から分離した仕様を、要求・概念・設計・アルゴリズ�
 - [FAM レイヤ設計](./architecture/fam-layers.md)
 - [GUI 責務定義](./architecture/gui-responsibility.md)
 - [Engine Boundary（依代境界）](./architecture/engine-boundary.md)
+- [人格StorageとInstance Ghost境界](./architecture/personality-storage.md)
 - [対応実機・検証炉](./architecture/supported-hardware.md)
 - [Sphere共通Context Dimension OS](https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/main/docs/theory/sphere-context-dimension-os.ja.md) — 技術Layer `L`とContext Dimension `D`、OAEの横断正本候補
 
