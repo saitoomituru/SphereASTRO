@@ -118,6 +118,8 @@ mergeはAとBを変更せず、Cを新規生成する。merge receiptは次を�
 - archive全体の共有を、全記録の公開同意とみなさない
 - `Save As`、redacted export、凍結、破棄を別操作にする
 - secret本文はexport対象にしない
+- private Instance Ghost UUID、embedding store内部hash、非公開fold vector、署名値は
+  log、GUI、telemetry、exportへ展開せず、権限付きSecret Pointerとして解決する
+- artifact全体の外側digestを、embedding store内部hashまたは御朱印値と混同しない
 - attachmentごとのlicense、同意、出典を保持する
 - 暗号化方式と鍵管理は`UNKNOWN`として実装前User Gateへ返す
-

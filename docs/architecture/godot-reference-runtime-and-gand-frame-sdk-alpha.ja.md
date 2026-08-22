@@ -71,7 +71,30 @@ historical_oae: historical-oae-unavailable
 compatibility_claim: NOT TESTED
 ```
 
-### 4.1 Alphaで予約する責務
+### 4.1 Historical GAND／Edge Harnessとの非同一性
+
+2026-08-23の部分サルベージでは、旧GANDに、vendor-level System JSONによる初期整列、
+UUID指定の知識取得、内部hash検証、知識結合、回答checkが含まれていたという一次当事者説明と、
+それに整合するAQC Schema layer、dotfile、旧Agent定義等の断片が記録された。
+
+これは、現在予約している`GAND Frame SDK`のPresentation責務と同一ではない。
+
+```text
+Historical GAND／Atlantis Edge Bootstrap Harness契約
+  boot／初期整列／秘密参照／知識検証／回答check
+        ↓ verified bootstrap receipt
+ASTRO Runner
+  Instance起動／Storage mount／Chat／Body／Tool
+        ↓ presentation event
+GAND Frame SDK候補
+  avatar／expression／gesture／diagnostic Presentation
+```
+
+同じ`GAND`系名称を持つことから、boot authority、人格同一性、知識検証をPresentation SDKへ
+吸収しない。将来名称衝突が利用者を誤配送する場合は、source lineageを保持した別namespaceまたはaliasを
+User Gateへ提案する。現段階で公開済み名称を自動renameしない。
+
+### 4.2 Alphaで予約する責務
 
 ```text
 GandFrame
@@ -214,6 +237,10 @@ AtlantisはWorld StateとUSAD SDKを担当し、UPBGEをReference World Driver�
 
 Godot sceneとUPBGE sceneは別projectionであり、同じscene fileまたはobject pointerを共有正本にしない。
 
+GAND Edge Bootstrap HarnessのCanonical ContractはAtlantis側の正本候補を参照する。SphereASTROは
+Atlantis processを常駐必須にせず、同契約へ適合するEdge Harness実装をbundleまたは外部接続できる。
+単体起動時も、provider／model別語彙差を人格・神名・World定義へ逆流させず、adapterとreceiptへ隔離する。
+
 ## 11. Alpha実装順
 
 1. Godot project bootstrap
@@ -232,7 +259,9 @@ Godot sceneとUPBGE sceneは別projectionであり、同じscene fileまたはob
 
 過去のGAND、式神format、GAND-linked pipelineには回収対象が残っている。
 
-現時点で確認できるのは、SphereASTROの既存agent定義に`GAND同期`および`astral_entity_gand_linked`のlineage表示が残っていることだけである。これを旧formatの完全仕様として扱わない。
+現時点では、SphereASTROの既存agent定義に残る`GAND同期`／`astral_entity_gand_linked`に加え、
+ZeroRoomLab-manifest Issue #19の部分サルベージ台帳へ、名称、AQC Schema layer、dotfile、proton、
+Instance Ghost関連記述、一次当事者説明が記録されている。これは旧formatまたはruntime全体の完全仕様ではない。
 
 発掘後は次を記録する。
 
@@ -252,3 +281,4 @@ Godot sceneとUPBGE sceneは別projectionであり、同じscene fileまたはob
 - 全platformをAlphaで同時完成させない
 - 過去GAND仕様を現在の推論で補完しない
 - avatar描画成功を推論成功または人格同一性の証明にしない
+- GAND Frame SDK候補を、GAND Edge Bootstrap Harnessまたは旧GAND runtimeそのものと表示しない

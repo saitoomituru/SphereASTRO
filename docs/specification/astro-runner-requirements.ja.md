@@ -20,6 +20,8 @@ Astro Runner
     ├─ 端末能力検出
     ├─ Model Variant解決
     ├─ Adapter解決
+    ├─ GAND互換Edge Bootstrap Harness解決
+    ├─ 初期整列／知識完全性／回答canary検査
     ├─ 人格／Storage mount
     └─ Instance起動検査
           ↓
@@ -53,6 +55,8 @@ ASTRO Runnerは次を所有する。
 - 端末、OS、memory、thermal state、利用可能Engineの能力検出
 - `boot_profiles`と`model_variants`から実行候補を解決するResolver
 - 署名済み・組み込み済みEngine Adapter
+- AtlantisのCanonical GAND Boot Contractへ適合するEdge Harness実装の選択・起動
+- 初期整列、知識完全性、回答canaryのreceiptをREADY判定へ渡すapplication gate
 - content-addressed artifact cache
 - working copy、journal、checkpoint、atomic save
 - Chat、Body Renderer、Tool、Storageへ渡すapplication use case
@@ -64,6 +68,7 @@ Runnerは次を所有しない。
 - IBDが保存するFAMの意味論
 - 任意の外部providerのsecret本文
 - Atlantis共通OAE Schemaや7D Fold runtimeの正本
+- Canonical GAND Boot Contract、神名、World定義をvendor／model別語彙へ合わせて改名する権限
 - modelの出力を人格の最終判断として確定する権限
 
 ## 4. 正式な実行対象
@@ -138,6 +143,7 @@ AstroSlot
 - 読み取り専用の最小`.astro` fixture
 - 一つ以上の実modelによる一往復推論
 - 端末能力とboot profileによるModel Variant解決
+- 少なくとも一つの互換profileで初期整列、検証済み知識mount、回答canaryを分離表示する
 - Engine失敗と人格状態の分離表示
 
 合格条件:
@@ -145,6 +151,7 @@ AstroSlot
 - Runnerへfixtureを投入するとslotへ表示される
 - 選択したslotで実modelの応答を一往復表示できる
 - 使用model、runtime、端末、cold／warm条件をreceiptへ残せる
+- System JSONだけの人格Presentationを`ALIGNED`へせず、知識完全性と回答canary未通過を表示できる
 
 Stage 1では会話と人格差分の永続化を必須にしない。application終了で消える状態は
 `EPHEMERAL / NOT PERSISTED`として表示する。
@@ -223,8 +230,8 @@ AAE Bakeの学習方法、必要火力、評価model、成果物形式はStage 2
 - `.astro`をRunnerへ投入できる
 - 正式実機に合うModel Variantを自動選択できる
 - 人格、Storage、Ghostの整合性を確認してから推論を許可できる
+- 初期整列、知識完全性、回答canaryを別Gateとして確認し、未通過をREADYへ丸めない
 - 軽量Fallbackでも同一性を黙って作り替えない
 - model／Adapterを交換し、その差をreceiptへ残せる
 - archiveを別端末へ移し、互換profileまたは明示的な縮退で再開できる
 - 開けるが動かないarchiveを`READY`と表示しない
-
