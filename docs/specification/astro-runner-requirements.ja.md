@@ -71,6 +71,39 @@ Runnerは次を所有しない。
 - Canonical GAND Boot Contract、神名、World定義をvendor／model別語彙へ合わせて改名する権限
 - modelの出力を人格の最終判断として確定する権限
 
+### 3.1 Context OS責務座標との境界
+
+ZeroRoomLab-manifestの`sphere-context-os-coordinate/2`では、`x.xxx.n`の先頭値はPresentation形態や
+GUIの有無ではなく、OSが衝突を裁定するContext責務classである。SphereASTRO自体を一つの先頭値へ
+固定せず、同じRunner／Agency EndpointがどのContextへ参加するかをreceiptで示す。
+
+```text
+0.xxx.n  Development Context
+         ASTROのfixture、debug、headless RunnerをDeveloperがAgent team開発へ使う
+
+1.xxx.n  Purpose Context
+         個人／会社／事業の目的へCompanionやPostPet型Presentationとして参加する
+
+2.xxx.n  Shared Reality Context
+         家庭／施設／Partyで独立したUser、家電、端末、Body、sensorと協調する
+
+3.xxx.n  World-Law Context
+         VR／MR WorldへBody、gesture、voice、haptic eventを投影する
+```
+
+headless／CLIだから自動的に`0`、GUIだから`1`、robot hardwareだから`2`とは判定しない。利用目的、
+参加World、独立主体、物理Effect scopeからContext classを解決する。
+
+`1`のPostPet型Companionは一つのUser／Organization目的へ最適化できる。複数の独立主体が同じParty Worldで
+別々のIntent、権限、身体、危険を持つCompanionは`2`の調停対象であり、`1`の機能追加として黙って実行しない。
+
+`3`でASTROはAgency／Body eventを提供できるが、World Law、MR projection、fabへのphysical commit authorityを
+単独所有しない。simulation成功、avatar表示、haptic出力を、家電、robot、3D printer等の不可逆Effect許可へ
+変換しない。
+
+既存`sphere-version-coordinate/1`のPresentation値はlegacy artifact解読用に保持する。`/1`の数値を
+`/2` ContextScopeへsilent copyしない。
+
 ## 4. 正式な実行対象
 
 | 対象 | 役割 | 検証範囲 |
