@@ -73,9 +73,14 @@ Runnerは次を所有しない。
 
 ### 3.1 Context OS責務座標との境界
 
-ZeroRoomLab-manifestの`sphere-context-os-coordinate/2`では、`x.xxx.n`の先頭値はPresentation形態や
-GUIの有無ではなく、OSが衝突を裁定するContext責務classである。SphereASTRO自体を一つの先頭値へ
-固定せず、同じRunner／Agency EndpointがどのContextへ参加するかをreceiptで示す。
+ZeroRoomLab-manifestの`sphere-context-os-coordinate/2`は、
+`UserContextSolution.SDKSeries.ProtocolKernelGeneration`である。Userは
+`Solution／Runner／Presentation -> SDK -> Protocol／Kernel`の順にsystemへinterfaceし、result／receiptは
+逆方向へ戻る。
+
+先頭値はUserからの抽象距離で並べたOS Solutionであり、Runner、GUI／Presentation、利用場面と主Context
+責務をbundleする。SphereASTRO Runner Coreを一つの先頭値へ固定せず、どのSolutionへpackageされ、
+どのContextへ参加したかをreceiptで示す。同じRunner CoreでもSolution classが異なれば先頭値は異なり得る。
 
 ```text
 0.xxx.n  Development Context
@@ -102,7 +107,7 @@ headless／CLIだから自動的に`0`、GUIだから`1`、robot hardwareだか�
 変換しない。
 
 既存`sphere-version-coordinate/1`のPresentation値はlegacy artifact解読用に保持する。`/1`の数値を
-`/2` ContextScopeへsilent copyしない。
+`/2` UserContextSolutionへsilent copyしない。
 
 ## 4. 正式な実行対象
 
