@@ -223,6 +223,28 @@ Alphaの最小fixture:
 
 ARはWorld Stateの自然科学的正本ではなく、選択されたPresentation／projectionである。
 
+### 9.1 `3.xxx.n` World-Law projection
+
+`sphere-context-os-coordinate/2`の`3.xxx.n`は、現実法則または独自法則を持つWorldをVR／MR／情報／
+fab／物理媒体へ投影するContext責務である。Godot／GAND Frameは、そのWorld Stateを視覚、音響、Body、
+gesture、haptic eventへ投影できるが、World Lawの正本やphysical Effect authorityではない。
+
+例として、`遊ぶ`Intentを持つTNT体験は、爆発映像、立体音響、bounded haptic、可逆な破壊World Stateを
+有効にし、物理blast／damage channelを無効にしたMR Lawとして構成できる。Meta Quest等をunmountすれば
+projection上の大穴は見えなくなり、物理建物は無傷のまま残る。物理damageがないことを、体験的・霊的な
+Missionの不成立へ変換しない。
+
+```text
+World Law／Effect policy        Atlantis／World Engine側
+  -> presentation event        GAND Frame／Godot
+  -> visual／audio／haptic      device projection
+  -> unmount                    reversible projection removal
+```
+
+実用品では、生成家具をMRで実寸試用し、採用案だけを3D printer等で物理Worldへ固定できる。
+GAND Frame／Godotは可逆previewを担えるが、structure／material／slice検証、家庭Contextとの衝突確認、
+fabrication authorizationを代行しない。MR表示成功をphysical commit許可へ昇格しない。
+
 ## 10. Atlantis／USADとの境界
 
 AtlantisはWorld StateとUSAD SDKを担当し、UPBGEをReference World Driver対象とする。SphereASTROはUSAD for UPBGEを直接依存へしない。
@@ -262,6 +284,10 @@ Atlantis processを常駐必須にせず、同契約へ適合するEdge Harness�
 現時点では、SphereASTROの既存agent定義に残る`GAND同期`／`astral_entity_gand_linked`に加え、
 ZeroRoomLab-manifest Issue #19の部分サルベージ台帳へ、名称、AQC Schema layer、dotfile、proton、
 Instance Ghost関連記述、一次当事者説明が記録されている。これは旧formatまたはruntime全体の完全仕様ではない。
+
+完全仕様が未回収であることを、旧実装の不存在証明へ変換しない。旧配布artifact、静的register、Schema、
+Proton、旧API chain、Embedding同期ずれとfallback／server補完記録は、部分的な実装・配布・運用Evidenceである。
+現在動かないことと、過去に実装がなかったことは別statusである。同時に、断片Evidenceを完全互換証明へ使わない。
 
 発掘後は次を記録する。
 
