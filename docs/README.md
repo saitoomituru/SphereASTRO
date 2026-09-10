@@ -17,6 +17,7 @@ README から分離した仕様を、要求・概念・設計・アルゴリズ�
 
 ## 2. Architecture（責務分離・境界設計）
 - **[2026-09 現行責務境界](./architecture/responsibility-boundary-2026-09.ja.md)**
+- **[2026-09 component submodules](./architecture/component-submodules-2026-09.ja.md)**
 - [FAM レイヤ設計](./architecture/fam-layers.md)
 - [GUI 責務定義](./architecture/gui-responsibility.md)
 - [Engine Boundary（依代境界）](./architecture/engine-boundary.md)
@@ -47,7 +48,8 @@ ASTROはIBD・AAE・FQueryをlibraryとして利用できるが、それぞれ�
 1. `specification` で製品契約とStage Gateを確認する。
 2. `concepts` で用語と価値前提を固定する。
 3. `architecture/responsibility-boundary-2026-09.ja.md` でcomponent責務を確認する。
-4. `architecture` で個別責務境界を確定する。
-5. `algorithms` を実装仕様として利用する。
+4. `architecture/component-submodules-2026-09.ja.md` で外部正本のpinと初期化方法を確認する。
+5. `architecture` で個別責務境界を確定する。
+6. `algorithms` を実装仕様として利用する。
 
 この順序により、思想 → 構造 → 実装 → 監査 の整合性を維持する。
