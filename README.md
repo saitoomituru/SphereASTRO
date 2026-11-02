@@ -9,6 +9,10 @@ SphereASTRO は、人間主権（Human Sovereignty）を維持するために、
 
 Human SovereigntyはSphereASTROが選択したapplication governance profileであり、Sphere Architect Core全体の普遍的な存在論・因果定規ではない。OAE等の観測情報を将来GUIへ表示する場合も、Observer、Initiator、Executor、Causal AgencyをUIが自動統合せず、上位Registryとfact scopeを表示する。
 
+## 命名と研究動機
+
+ASTRO / ASTRO BOY、天馬博士と「科学の子」、親離れ、将来のアップローダー／BMIを含む射程は[ASTRO命名と親子のフレーバー](docs/concepts/astro-naming-and-parenthood.ja.md)を参照する。命名動機と未確定のデバイス候補は、現行Runnerの実装済み機能とは分ける。
+
 ## Vision / Philosophy
 - 人間主権を前提とし、判断と責任の最終主体は常に人間とする。
 - 責任分界を明示し、判断過程の追跡可能性を確保する。
