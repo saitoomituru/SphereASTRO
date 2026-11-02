@@ -1,5 +1,8 @@
 # SphereASTRO
 
+
+> **御霊・依代の補足：** モデルのparameter billionsと、Instance固有の記憶・行動ベクトルが描く時間的な軌跡（「メモリーのビリオン」）は別。ASTROがハーネスする人格・記憶・関係性の設計対象を、weights数や単純な会話ログ量へ還元しない。履歴の再現と主観的同一性の証明も区別する。横断定義：[記憶軌跡とパラメーターのB](https://github.com/saitoomituru/ZeroRoomLab-manifest/blob/main/docs/theory/model-parameters-vs-memory-vector-trajectories.ja.md)。
+
 SphereASTRO は、人間主権（Human Sovereignty）を維持するために、
 対話体験の入口となる GUI と責任境界を設計するプロジェクトである。
 本プロジェクトは、創造・人格・意識を扱うことを前提に、判断根拠と運用責任を人間側へ明示的に接続することを目的とする。
